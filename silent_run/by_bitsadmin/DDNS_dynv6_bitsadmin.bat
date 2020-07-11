@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set token=eveeCcHQGEzFqbBdERmispKtmMG97m
+set token='Your token'
 set hostname='Your dynv6 hostname'
 set "log_addr='log file address'
 set "ipv6_cache='ipv6 address file address'"
