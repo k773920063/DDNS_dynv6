@@ -6,6 +6,8 @@ set hostname=你的域名
 set "log_addr=存放结果日志的文件位置"
 set "ipv6_cache=保存ipv6地址的文件位置"
 
+if not exist %ipv6_cache% (echo create_ipv6_cache_file > %ipv6_cache%)
+
 for /f "delims={}" %%i in ('wmic nicConfig where "IPEnabled='True'" get IPAddress ^| find ":"') do (
     for %%j in (%%i) do (
         set "IPv6=%%~j"
